@@ -1,0 +1,202 @@
+@import vars
+@import mixin
+
+body
+    +reset-margin
+    +flex-column
+    font-family: 'Roboto', Arial, sans-serif
+    min-height: 100vh
+    box-sizing: border-box
+    color: #444
+    font-size: .8rem
+    line-height: 1.2
+    background-color: $color-bg-body
+
+header
+    // background-color: $color-header
+    // background-image: url(../img/history2.jpg)
+    background-color: rgb(6, 96, 175, 1)
+    // background-image: radial-gradient(circle at 10% 10%, rgba(169,58,84), rgba(6,96,175, 0.5) 50%), radial-gradient(circle at 60% 90%, rgba(6,96,175), rgba(169,58,84) 50%)
+    padding: 1rem
+    box-shadow: $box-shadow
+    .container
+        align-items: center
+
+main
+    +flex-row
+    flex-grow: 1
+nav
+    // background-color: $color-nav
+    // box-shadow: $box-shadow
+    // padding: .5rem 0
+
+.navigation
+    +horizontal-list
+    +flex-row
+    justify-content: flex-between
+    font-size: 1rem
+    text-transform: uppercase
+    a
+        text-decoration: none
+        font-weight: 800
+        color: #FFF
+        display: inline-block
+        padding: 1rem 2rem
+        border-bottom: 1px solid rgba(0,0,0,0)
+        transition: all .3s ease
+        &:hover
+            color: #fff
+            // transform: scale(1.05)
+            border-bottom: 1px solid $color-pink
+
+    &_drop
+        display: none
+        position: absolute
+        padding: 0
+        z-index: 1
+        background-color: $color-bg
+        border-color: $color-bg
+        min-width: 350px
+        top: 3.3rem
+
+        // right: 0
+    &_drop li
+        margin: 0
+
+        a
+            color: #000
+            width: 100%
+            box-sizing: border-box
+        &:hover
+            background-color: $color-pink
+            color: #fff
+    &_list
+        position: relative
+        box-sizing: border-box
+        // border-bottom: 1px solid $color-nav
+
+        &:hover
+            // border-bottom: 1px solid $color-pink
+            cursor: pointer
+
+    &_list:hover>&_drop
+        +flex-column
+        box-shadow: $box-shadow
+
+.home_page
+    +flex-row
+    width: 250px
+    color: #b6b6b6
+    font-size: 1.1rem
+    font-weight: 900
+    text-decoration: none
+    transition: all .3s ease
+    // text-transform: uppercase
+    align-items: center
+    justify-content: space-between
+    // text-shadow: 0 0px 1px #09011a
+    & span
+        margin-left: .5rem
+    &_logo
+        filter: invert(98%) sepia(100%) saturate(0%) hue-rotate(314deg) brightness(104%) contrast(102%)
+        width: 80px
+
+    &_search input
+        background-color: rgba(0, 0, 0, 0)
+        outline: none
+        border-radius: .1rem
+        padding: 0.2rem
+        margin-right: 0.5rem
+        border-color: #cdcccc
+.news
+    +flex-row
+    flex-wrap: wrap
+    margin-top: 3rem
+    padding: 2rem 1rem
+    width: 75%
+    box-shadow: $box-shadow
+    background-color: $color-bg
+    border-radius: .4rem
+
+    &_item
+        +flex-column
+        // box-shadow: $box-shadow
+        // background-color: $color-bg
+        margin-bottom: 3rem
+        padding: 1rem
+        min-width: 200px
+        width: 25%
+        max-height: 400px
+        overflow: hidden
+        // border-bottom: 1px solid $color-pink
+        &_left
+            margin-bottom: 1rem
+        &_footer
+            +flex-row
+            margin-top: 2rem
+            align-items: center
+            a
+                padding: .5rem 1rem
+                color: #fff
+                background-color: $color-pink
+                font-weight: 800
+                text-decoration: none
+                text-transform: uppercase
+                // border: 1px solid $color-pink
+                border-radius: .2rem
+                transition: all .3s ease
+                // box-shadow: $box-shadow
+                &:hover
+                    // background-color: $color-pink
+                    color: $color-bg
+                    opacity: .8
+                    // box-shadow: none
+
+        h1
+            margin: 0 0 0.5rem 0
+            text-transform: uppercase
+            font-size: 1.2rem
+
+        p
+            color: #666666
+
+        // &_left
+        //     width: 30%
+        // &_rigth
+        //     width: 65%
+
+    &_img
+        width: 100%
+        border-radius: .1rem
+        box-shadow: $box-shadow
+
+.announcement
+    margin: 2rem 1rem 1rem
+    // width: 25%
+
+.more_info, .new_staff
+    height: 380px
+    margin: 1rem auto 2rem
+    background-color: $color-bg
+    box-shadow: $box-shadow
+    border-radius: .2rem
+    h1
+        margin: 0
+        text-transform: uppercase
+        // background-color: $color-header
+        opacity: .9
+        font-weight: bold
+        padding: 1rem
+        border-bottom: 1px solid $color-nav
+        text-align: center
+
+.container
+    +flex-row
+    max-width: $container-width
+    margin: 0 auto
+    align-items: flex-start
+footer
+    padding: 2rem
+    text-align: center
+.footer_contacts
+    +reset-list

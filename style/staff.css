@@ -1,0 +1,48 @@
+.staff {
+  width: 90%;
+  height: 600px;
+  margin: 3rem auto;
+}
+.staff_nav ol {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10%;
+  list-style-type: none;
+}
+.staff_nav ol li {
+  color: #09011a;
+  font-weight: 800;
+  display: inline-block;
+  margin: 0 0.2rem;
+  padding: 0.5rem;
+  border: 1px solid #ef4158;
+  border-radius: 0.2rem;
+  transition: all 0.3s ease;
+}
+.staff_nav ol li:hover {
+  background-color: #ef4158;
+  color: #fff;
+  cursor: pointer;
+}
+.staff_list {
+  -moz-columns: 300px auto;
+       columns: 300px auto;
+  margin: 2rem;
+  border-bottom: 1px solid #ef4158;
+}
+.staff_item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 1rem;
+}
+.staff_photo {
+  width: 100px;
+  height: 100px;
+  background-color: #877e7e;
+}
+
+#A:before {
+  content: "A";
+  font-size: 2rem;
+  position: absolute;
+}/*# sourceMappingURL=staff.css.map */

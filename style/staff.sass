@@ -1,0 +1,40 @@
+@import vars
+@import mixin
+
+.staff
+    width: 90%
+    height: 600px
+    margin: 3rem auto
+    &_nav ol
+        +flex-row
+        margin: 0 10%
+        list-style-type: none
+        & li
+            color: $color-shadow
+            font-weight: 800
+            display: inline-block
+            margin: 0 .2rem
+            padding: .5rem
+            border: 1px solid $color-pink
+            border-radius: .2rem
+            transition: all .3s ease
+            &:hover
+                background-color: $color-pink
+                color: $color-bg
+                cursor: pointer
+    &_list
+        columns: 300px auto
+        margin: 2rem
+        border-bottom: 1px solid $color-pink
+
+    &_item
+        +flex-row
+        padding: .5rem 1rem
+    &_photo
+        width: 100px
+        height: 100px
+        background-color: #877e7e
+#A:before
+    content: "A"
+    font-size: 2rem
+    position: absolute
