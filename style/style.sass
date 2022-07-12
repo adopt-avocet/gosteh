@@ -7,17 +7,17 @@ body
     font-family: 'Roboto', Arial, sans-serif
     min-height: 100vh
     box-sizing: border-box
-    color: #444
-    font-size: .8rem
+    // color: #444
+    font-size: 14px
     line-height: 1.2
     background-color: $color-bg-body
 
 header
     // background-color: $color-header
     // background-image: url(../img/history2.jpg)
-    background-color: rgb(6, 96, 175, 1)
-    // background-image: radial-gradient(circle at 10% 10%, rgba(169,58,84), rgba(6,96,175, 0.5) 50%), radial-gradient(circle at 60% 90%, rgba(6,96,175), rgba(169,58,84) 50%)
-    padding: 1rem
+    background-color: $color-blue
+    background-image: radial-gradient(circle at 10% 10%, rgba(169,58,84), rgba(6,96,175, 0.5) 50%), radial-gradient(circle at 60% 90%, rgba(6,96,175), rgba(169,58,84) 50%)
+    padding: .3rem
     box-shadow: $box-shadow
     .container
         align-items: center
@@ -34,20 +34,23 @@ nav
     +horizontal-list
     +flex-row
     justify-content: flex-between
-    font-size: 1rem
+    font-size: .8rem
     text-transform: uppercase
     a
         text-decoration: none
-        font-weight: 800
+        font-weight: 900
         color: #FFF
+        opacity: .7
         display: inline-block
         padding: 1rem 2rem
-        border-bottom: 1px solid rgba(0,0,0,0)
-        transition: all .3s ease
+        // border-bottom: 2px solid rgba(0,0,0,0)
+        transition: all .5s ease
+
         &:hover
-            color: #fff
-            // transform: scale(1.05)
-            border-bottom: 1px solid $color-pink
+            opacity: 1
+            // color: #fff
+            // transform: scale(1.01)
+            // border-bottom: 2px solid $color-pink
 
     &_drop
         display: none
@@ -57,19 +60,22 @@ nav
         background-color: $color-bg
         border-color: $color-bg
         min-width: 350px
-        top: 3.3rem
-
+        top: 3rem
+        border-radius: 0.2rem
+        box-shadow: $box-shadow
         // right: 0
     &_drop li
         margin: 0
-
+        transition: all .5s ease
         a
             color: #000
             width: 100%
             box-sizing: border-box
-        &:hover
-            background-color: $color-pink
+        &:hover a
+            background-color: $color-blue
+            opacity: .6
             color: #fff
+            border-radius: 0.2rem
     &_list
         position: relative
         box-sizing: border-box
@@ -79,35 +85,44 @@ nav
             // border-bottom: 1px solid $color-pink
             cursor: pointer
 
-    &_list:hover>&_drop
+    &_list:hover &_drop
         +flex-column
-        box-shadow: $box-shadow
 
 .home_page
     +flex-row
-    width: 250px
+    width: 200px
     color: #b6b6b6
-    font-size: 1.1rem
     font-weight: 900
     text-decoration: none
-    transition: all .3s ease
+    transition: all .5s ease
     // text-transform: uppercase
     align-items: center
-    justify-content: space-between
+    // justify-content: space-between
     // text-shadow: 0 0px 1px #09011a
     & span
-        margin-left: .5rem
+        margin-left: .2rem
+        font-size: .7rem
+        text-align: center
     &_logo
         filter: invert(98%) sepia(100%) saturate(0%) hue-rotate(314deg) brightness(104%) contrast(102%)
-        width: 80px
+        width: 60px
 
     &_search input
-        background-color: rgba(0, 0, 0, 0)
+        background-color: rgba(255, 255, 255, 0.1)
+        color: #fff
+        opacity: .9
         outline: none
-        border-radius: .1rem
-        padding: 0.2rem
+        border: none
+        padding: 0.5rem
         margin-right: 0.5rem
-        border-color: #cdcccc
+        border-radius: .2rem
+        // border-color: #cdcccc
+        &::placeholder
+            color: #fff
+            font-size: .9rem
+            opacity: 0.5
+            padding-left: 0.5rem
+
 .news
     +flex-row
     flex-wrap: wrap
@@ -116,7 +131,7 @@ nav
     width: 75%
     box-shadow: $box-shadow
     background-color: $color-bg
-    border-radius: .4rem
+    border-radius: .2rem
 
     &_item
         +flex-column
@@ -137,19 +152,20 @@ nav
             align-items: center
             a
                 padding: .5rem 1rem
-                color: #fff
+                color: $color-bg
                 background-color: $color-pink
+                opacity: .8
                 font-weight: 800
                 text-decoration: none
                 text-transform: uppercase
                 // border: 1px solid $color-pink
                 border-radius: .2rem
-                transition: all .3s ease
+                transition: opacity .5s ease
                 // box-shadow: $box-shadow
                 &:hover
                     // background-color: $color-pink
-                    color: $color-bg
-                    opacity: .8
+
+                    opacity: 1
                     // box-shadow: none
 
         h1
