@@ -1,48 +1,56 @@
 .staff {
+  max-width: 1400px;
   width: 90%;
-  height: 600px;
+  transition: all 0.5s ease;
   margin: 3rem auto;
 }
 .staff_nav ol {
   display: flex;
   justify-content: space-between;
-  margin: 0 10%;
+  justify-content: center;
   list-style-type: none;
+  padding: 0;
+  flex-wrap: wrap;
 }
 .staff_nav ol li {
   color: #09011a;
   font-weight: 800;
   display: inline-block;
-  margin: 0 0.2rem;
-  padding: 0.4rem;
-  border: 2px solid #d4d4d4;
+  margin: 0.4rem 0.2rem;
+  padding: 0.5rem 0.6rem;
+  text-align: center;
+  box-shadow: 0px 0px 3px -1px #09011a;
   border-radius: 0.2rem;
+  line-height: 1rem;
   transition: all 0.5s ease;
 }
 .staff_nav ol li:hover {
-  border: 2px solid #ef4158;
+  color: #ef4158;
   cursor: pointer;
+  box-shadow: 0px 0px 3px -1px #ef4158;
 }
 .staff_nav ol li.staff_active {
-  border: 2px solid #ef4158;
   background-color: #ef4158;
-  color: #fff;
+  opacity: 0.9;
+  color: #f8f8fa;
+  box-shadow: 0px 0px 3px -1px rgba(0, 0, 0, 0.5);
 }
 .staff_list {
+  min-height: 400px;
   -moz-columns: 300px auto;
        columns: 300px auto;
   position: relative;
   margin: 2rem auto;
   padding: 3rem 1rem 1rem 2rem;
   box-shadow: 0px 3px 7px -5px #09011a;
-  background-color: #fff;
+  background-color: #f8f8fa;
   border-radius: 0.2rem;
 }
 .staff_item {
   display: flex;
   justify-content: space-between;
   justify-content: space-around;
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1rem;
 }
 .staff_photo {
   width: 90px;
@@ -51,9 +59,10 @@
 }
 .staff_index {
   position: absolute;
-  top: 0.3rem;
-  left: 0.6rem;
+  top: 0.4rem;
+  left: 0.8rem;
   font-size: 2.5rem;
   font-weight: 900;
   color: #ef4158;
+  opacity: 0.9;
 }/*# sourceMappingURL=staff.css.map */

@@ -4,10 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="style/sidebar.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style/fontello.css" />
-    <link rel="stylesheet" href="style/slide-menu.css" />
+
+    <link rel="stylesheet" href="style/style.css" />
     <link rel="stylesheet" href="style/staff.css" />
+
     <title>Document</title>
   </head>
   <body>
@@ -66,6 +72,39 @@
     </header>
 
     <main>
+      <div class="sidebar">
+        <div class="logo_content">
+          <div class="logo_name">Сотрудники</div>
+          <i class="bx bx-menu" id="btn"></i>
+        </div>
+
+        <ul class="nav_list">
+          <li>
+            <i class="bx bx-search"></i>
+            <input type="text" placeholder="Поиск..." />
+          </li>
+          <li>
+            <a href="">
+              <i class="bx bx-user"></i>
+
+              <span class="links_name">Алфавитный указатель</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="">
+              <i class="bx bx-pie-chart-alt-2"></i>
+              <span class="links_name">Подразделения</span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <i class="bx bx-phone"></i>
+              <span class="links_name">Внутренние телефоны</span>
+            </a>
+          </li>
+        </ul>
+      </div>
       <div class="staff">
         <nav class="staff_nav">
           <ol>
@@ -182,108 +221,20 @@
               <p class="staff_position">Lorem ipsum dolor sit amet.</p>
             </div>
           </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
-          <div class="staff_item">
-            <img src="" alt="" class="staff_photo" />
-            <div class="staff_info">
-              <p class="staff_name">Lorem, ipsum dolor.</p>
-              <p class="staff_position">Lorem ipsum dolor sit amet.</p>
-            </div>
-          </div>
         </div>
       </div>
-      <div class="menu">
-        <div class="title">Сотрудники</div>
-        <ul class="nav">
-          <li><a href="#">Алфавитный указатель</a></li>
-          <li><a href="#">Подразделения</a></li>
-          <li><a href="#">Внутренние телефоны</a></li>
-        </ul>
-      </div>
     </main>
+    <script>
+      const btn = document.querySelector("#btn");
+      const sidebar = document.querySelector(".sidebar");
+      const search = document.querySelector(".bx-search");
+
+      btn.onclick = makeActive;
+      search.onclick = makeActive;
+      function makeActive() {
+        sidebar.classList.toggle("active");
+      }
+    </script>
     <footer>
       <ul class="footer_contacts">
         <li>121099, Москва, Новинский б-р, д. 11</li>

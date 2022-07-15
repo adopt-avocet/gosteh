@@ -1,0 +1,19 @@
+.about {
+  max-width: 1400px;
+  width: 90%;
+  margin: 3rem auto;
+}
+.about h1 {
+  text-align: center;
+}
+.about_info {
+  margin: 2rem auto;
+  min-height: 400px;
+  padding: 3rem 2.5rem;
+  box-shadow: 0px 3px 7px -5px #09011a;
+  background-color: #f8f8fa;
+  border-radius: 0.2rem;
+}
+.about_info p {
+  margin: 1rem auto;
+}/*# sourceMappingURL=about.css.map */
